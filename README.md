@@ -1,0 +1,9 @@
+# OS_Final_Project_BJE
+This project is designed to demonstrate a simple interaction between a client-server. The situation presented in the client-server is ticket purchases to see the movie Dune (not Doom). The project contains three classes total: the Client class, the Server class, and the private static ClientHandler class, which is located in the Server class. It is important to note that the Server class needs to run before the Client class. Due to the use of a semaphore, only one client can purchase tickets at a time. Any other clients that join while a client has acquired the semaphore will be placed in a queue until the client finishes their purchase and releases the semaphore, therefore making access to the ticket purchases the critical section. Clients are terminated from the server when they finish purchasing movies or type the word "exit"(case does not matter).If the number of tickets is 0, then the clients will receive a message stating that all of the tickets have been sold. In basic terms, the server gives clients a number it can subtract. The project has two noted bugs. One is where the client connection does not end automatically if the number of tickets has reached 0 and the Client needs to manually end their connection by typing "exit". The other bug is where clients waiting to access the tickets are not given a message stating they are waiting in a queue. The reason behind the specification of Dune is a joke from the first day of class, when I said my favorite video game series was Doom and the professor thought I said Dune.
+
+Sources used in Project:
+https://www.geeksforgeeks.org/multithreaded-servers-in-java/ 
+https://blog.octalabs.com/semaphores-a-guide-to-synchronization-in-multithreaded-java-applications-eb223a5d633e
+https://www.geeksforgeeks.org/linkedblockingqueue-class-in-java/
+https://www.javatpoint.com/java-break
+https://www.geeksforgeeks.org/compare-two-strings-in-java/
